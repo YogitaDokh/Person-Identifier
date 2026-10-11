@@ -1,0 +1,16 @@
+.env
+SampleData/
+output/
+models/
+known_people/
+# Common additions for ML/CV projects
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.pt
+*.pth
+*.onnx
+venv/
+.venv/
+*.log
+.DS_Store
