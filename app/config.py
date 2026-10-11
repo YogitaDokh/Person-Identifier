@@ -34,11 +34,11 @@ class Settings:
     face_det_size: tuple[int, int] = (640, 640)
     face_det_threshold: float = 0.5
 
-    mysql_host: str = os.getenv('REID_MYSQL_HOST', 'localhost')
-    mysql_port: int = int(os.getenv('REID_MYSQL_PORT', '3306'))
-    mysql_user: str = os.getenv('REID_MYSQL_USER', 'root')
-    mysql_password: str = os.getenv('REID_MYSQL_PASSWORD', 'sycet@123')
-    mysql_database: str = os.getenv('REID_MYSQL_DATABASE', 'person_reid')
+    mysql_host: str = os.getenv('REID_MYSQL_HOST')
+    mysql_port: int = int(os.getenv('REID_MYSQL_PORT'))
+    mysql_user: str = os.getenv('REID_MYSQL_USER')
+    mysql_password: str = os.getenv('REID_MYSQL_PASSWORD')
+    mysql_database: str = os.getenv('REID_MYSQL_DATABASE')
 
     def __post_init__(self) -> None:
         self.gallery_dir = self.gallery_dir or self.project_root / 'known_people'
